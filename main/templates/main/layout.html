@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<script src="{% static 'main/js/masonry.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg fixed-top nav nav-large">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse nav-center-logo navbar-expand-xl col-lg-3 col-md-3 justify-content-center">
+				<h4><a href="{% url 'home' %}" class="nav-link main-text compressing-text">FindFish</a></h4>
+			</div>
+			
+			<div class="collapse navbar-collapse col-lg-6 col-md-6 nav-first justify-content-center">
+				<ul class="navbar-nav mr-4 topnav">
+					<li class="nav-item">
+						<a href="{% url 'home' %}" class="nav-link main-text compressing-text"class="active" id="home">Считать рыбов</a>
+					</li>
+					<li class="nav-item">
+						<a href="{% url 'view' %}" class="nav-link main-text compressing-text" id="lent">Сколько рыбов</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<nav class="navbar navbar-expand fixed-bottom nav nav-small nav-small-main ">
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<div class="collapse navbar-collapse nav-first">
+				<ul class="navbar-nav topnav-icon container">
+					<li class="nav-item col-3">
+						<a href="{% url 'home' %}" class="nav-link main-text compressing-text icon-link" class="active" id="home">
+							<svg width="5vh" height="5vh" viewBox="0 0 16 16" class="bi bi-house compressing-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+								<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+							</svg>
+						</a>
+					</li>
+					<li class="nav-item col-3">
+						<a href="{% url 'view' %}" class="nav-link main-text compressing-text icon-link" id="lent">
+							<svg width="5vh" height="5vh" viewBox="0 0 16 16" class="bi bi-view-list compressing-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  								<path fill-rule="evenodd" d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>	
+	</nav>
+	<div>
+		<main>
+			{% block content %}
+			
+			{% endblock %}
+		</main>
+	</div>
+	<body>
+		</html>

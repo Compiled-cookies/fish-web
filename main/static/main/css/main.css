@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --dark-green: #164A41;
+  --medium-green: #4D774E;
+  --light-green: #9DC88D;
+  --natural-yellow: #F1B24A;
+  --white: #FFFFFF;
+}
+
+body {
+  background: linear-gradient(to right, var(--dark-green), var(--light-green));
+  overflow-x: hidden;
+}
+
+.unsee{
+  display: none;
+}
+
+/* Стили для текста. Это общий класс для красивого текста */
+.mainpage-text{
+  text-align: center;
+  font-size: 2.5vh;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+  line-height: 3vh;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+}
+.guide-text{
+  border-bottom: 2px solid #F1B24A;
+  border-top: 2px solid #F1B24A;
+  height: auto;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.main-text {
+  text-align: center;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+  line-height: 5vh;
+  cursor: pointer;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 4vh;
+  font-style: bold;
+  font-weight: normal;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.nav {
+  background: linear-gradient(to right, var(--dark-green), var(--light-green));
+  height: 8vh;
+}
+
+.nav-center-logo h4 a {
+  text-decoration: none;
+  color: white;
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.nav-link:first-child {
+  margin-left: 1em;
+}
+
+/* .nav-first {
+  background: white;
+  } */
+  /* Стили для ссылок панели */
+
+  .topnav li a,
+  .topnav-auth li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .topnav li,
+  .topnav-auth li {
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+  /* Изменения заднего фона кнопок при наведении */
+
+  .topnav li:hover,
+  .topnav-auth li:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+    border-radius: 20px;
+  }
+
+
+  /* Изменение цвета ссылок при наведении */
+
+
+
+  .topnav li a:hover,
+  .topnav-auth li a:hover {
+    color: black;
+  }
+
+  .main-page .main-title {
+    color: white;
+  }
+  .main-page .left {
+    padding-right: 0.5em;
+    padding-left: 0;
+    margin-right: 1em;
+    width: auto;
+    color: white;
+    border-right: 2px solid #F1B24A;
+  }
+
+  .share-form .right {
+    margin-top: 4vh;
+  }
+
+  .share-form {
+    margin: 0;
+    position: relative;
+  }
+
+  .share-form .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .share-form .right div input {
+    height: 4.5vh;
+  }
+
+  .share-form .left h1 {
+    /*   margin-top: 2em; */
+    padding-right: 0.5em;
+    padding-left: 0;
+    margin-right: 1em;
+    width: auto;
+    color: white;
+    border-right: 2px solid #F1B24A;
+  }
+
+  .share-form .left .description {
+    font-size: 1.5em;
+  }
+
+  .share-form .right h4 {
+    padding: 0;
+    color: white;
+    border-top: 2px solid #F1B24A;
+    border-left: 2px solid #F1B24A;
+    border-right: 2px solid #F1B24A;
+    border-radius: 20px 20px 0% 0%;
+    cursor: auto;
+  }
+
+  .share-form .right {
+    max-width: 600px;
+  }
+
+  .share-form .right .btn-secondary {
+    background: none;
+    color: var(--white);
+    border-radius: 10px;
+    border: 2px solid white;
+    max-width: 200px;
+    font-weight: bolder;
+    font-family: 'Inconsolata', monospace;
+  }
+  .share-form .right .btn-secondary:hover{
+    transform: scale(1.05);
+    transition: opacity 124ms linear, transform 124ms linear;
+    background: white;
+    color: black;
+  }
+
+  .share-form .right .form-control::placeholder {
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.85vh;
+    font-weight: bolder;
+    height: auto;
+  }
+
+  .share-form .right textarea {
+    max-height: 1000px;
+  }
+
+  .share-form .right .form-control {
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .logged-out .left {
+    margin: 0;
+    height: 5vh;
+  }
+  .logged-out .right{
+    margin-top: 0;
+    height: 5vh;
+  }
+  .logged-out .btn-block {
+    max-width: 200px;
+    background: #F1B24A;
+    border: 0;
+    height: auto;
+  }
+
+
+
+/* ::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+}
+
+:-moz-placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+}
+
+:-o-placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+}
+
+:-khtml-placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+}
+
+:placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 2px;
+  } */
+
+  input,
+  textarea {
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 0.05vw;
+  }
+
+  .bold-text-input-search {
+    font-size: 2vh;
+    height: auto;
+    font-weight: bolder;
+    font-family: 'Inconsolata', monospace;
+  }
+  .bold-text-input {
+    font-size: 1.85vh;
+    height: auto;
+    font-weight: bolder;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-family: 'Inconsolata', monospace;
+  }
+  .bold-text-input::placeholder{
+    color: white;
+  }
+  .bold-text-input:focus{
+    background: transparent;
+    color: white;
+  }
+  .bold-text-input:hover{
+    transform: scale(1.05);
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+  .bold-text-submit {
+    height: auto;
+    font-weight: bolder;
+    font-family: 'Inconsolata', monospace;
+  }
+  .bold-text {
+    font-weight: bolder;
+    font-family: 'Inconsolata', monospace;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .custom-file-upload {
+    border: 2px solid white;
+    border-radius: 10px 10px 10px 10px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: bolder;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 2px;
+    padding-right: 0.5vh;
+  }
+  .custom-file-upload:hover{
+    transform: scale(1.05);
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+
+  .fa-upload {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+  }
+
+  .scroll-up {
+    width: 2vh;
+    height: 2vh;
+  }
+
+  main {
+    margin-top: 11vh;
+  }
+
+
+  /* main */
+  .btn-secondary{
+    background: none;
+    border: 0;
+
+    max-width: 200px;
+    height: auto;
+  }
+  .btn-secondary:hover{
+    opacity: 1.2;
+    transform: scale(1.2);
+    border: 0;
+    background: none;
+  }
+  .btn-lg{
+    background: none;
+  }
+  .btn-lg:hover{
+    background: none;
+  }
+  .form-profile {
+    margin-bottom: 0;
+  }
+
+  .pictures_lent {
+    margin-bottom: 10vw;
+  }
+  main .features_0 .img-fluid {
+    border-radius: 20px;
+    width: 1000px;
+    height: auto;
+    margin-bottom: 3vh;
+    opacity: 1;
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+
+  main .features_0 .pic_post {
+    position: relative;
+  }
+
+  main .features_0 .pic_post h4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 1vh;
+    width: 100%;
+    display: none;
+    opacity: 1;
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+
+  main .features_0 .pic_post h4:hover {
+    display: block;
+  }
+
+  main .features_0 .img-fluid:hover {
+    opacity: 1.2;
+    transform: scale(1.05);
+  }
+
+  main .features_0 .img-fluid:hover::after {
+    content: attr(data-title);
+  }
+
+  /* progile */
+  .username-block {
+    font-size: 3vh;
+    font-weight: bold;
+    line-height: 4vh;
+    height: 4vh;
+    cursor: default;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+  }
+
+  main .features {
+    margin-bottom: 7vh;
+  }
+  main .features .left .picture-block {
+    display: block;
+    border-radius: 20px;
+  }
+
+  main .features .left .username-block {
+    font-size: 3vh;
+    font-weight: bold;
+    line-height: 4vh;
+    height: 4vh;
+    cursor: default;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+  }
+
+  main .features .right .title-block {
+    display: block;
+    background: white;
+    border-radius: 20px;
+    font-size: 3vh;
+    line-height: 4vh;
+    height: auto;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: default;
+  }
+
+  main .features .right .anons-block {
+    font-size: 2vh;
+    line-height: auto;
+    height: 9vh;
+    cursor: default;
+    font-weight: bold;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+  }
+
+  main .features .right .full_text-block {
+    text-align: center;
+    display: block;
+    background: white;
+    border-radius: 20px;
+    font-size: 2vh;
+    letter-spacing: 1px;
+    line-height: auto;
+    cursor: default;
+    height: 36vh;
+  }
+
+  main .features .right .rating-block {
+    display: block;
+    text-align: center;
+    font-size: 2vh;
+    letter-spacing: 2px;
+    height: auto;
+    background: white;
+    border-radius: 20px;
+    cursor: default;
+    margin-bottom: 1vh;
+  }
+
+  .rate-range-group{
+    margin: 0;
+    height: 6vh;
+    padding-top: 1vh;
+  }
+
+
+  .input-range{
+    height: 3vh;
+    margin-top: 1vh;
+  }
+  .label-form{
+    height: 1vh;
+    margin: 0;
+    margin-bottom: 0.5vh; 
+    font-size: 2vh;
+  }
+
+  .btn-rate-range{
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    color: black;
+    border: 2px solid black;
+  }
+  .btn-rate-range:hover{
+    color: black;
+    border: 2px solid black;
+    transform: scale(1.1);
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+  .rate_accept{
+    background: green;
+    color: white;
+    width: auto
+  }
+
+
+  main .features .right .date-block {
+    display: block;
+    text-align: center;
+    font-size: 2vh;
+    letter-spacing: 2px;
+    line-height: 4vh;
+    height: 4vh;
+    background: white;
+    border-radius: 20px;
+    cursor: default;
+  }
+  .profile_url{
+    text-decoration: none;
+    color: black;
+  }
+  .profile_url h4:hover, .profile_url:hover{
+    text-decoration: none;
+    color: black;
+    transition: opacity 124ms linear, transform 124ms linear;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .white_text{
+    color: white;
+  }
+
+  /* Scoreboard */
+  .dropdown{
+    margin-bottom: 2vh;
+  }
+
+  .dropdown-item{
+    background: #F1B24A
+    color: black;
+  }
+  .dropdown-item:hover{
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition: opacity 124ms linear, transform 124ms linear;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .dropdown .btn-lg{
+    border-radius: 20px;
+    border: 2px solid white;
+    background: none;
+  }
+  .dropdown-toggle{
+    background: none;
+    color: white;
+  }
+  .dropdown-toggle:hover{
+    background: white;
+    color: black;
+    transition: opacity 124ms linear, transform 124ms linear;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .dropdown-toggle:focus{
+    background: white;
+    color: black;
+    
+  }
+  .dropdown-menu{
+    background: white;
+    border-radius: 15px;
+    transition: opacity 124ms linear, transform 124ms linear;
+  }
+
+
+  @media screen and (max-width: 1500px) {
+    .compressing-text {
+      text-align: center;
+      font-size: 1.5vh;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Inconsolata', monospace;
+      letter-spacing: 0.25px;
+      line-height: 2.5vh;
+      cursor: pointer;
+    }
+    .nav-center-logo h4 a {
+      text-decoration: none;
+      color: white;
+      font-size: 2vh;
+      font-weight: bold;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .share-form .left h1 {
+      margin: 0;
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 1vh;
+      padding-bottom: 0.1em;
+      margin-bottom: 1vh;
+      line-height: 2.6
+      color: white;
+      border-bottom: 2px solid #F1B24A;
+      border-right: 0;
+    }
+
+    .title-compressing {
+      text-align: center;
+      font-size: 2.5vh;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: 0.25px;
+      line-height: 2.5vh;
+      padding-bottom: 2.7vh;
+    }
+
+    .logged-out .right{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    .share-form .right {
+      margin-bottom: 8vh;
+    }
+
+  }
+
+  @media screen and (max-width: 1000px) {
+    .nav-large {
+      display: none;
+    }
+    .nav-small-main {
+      height: 7.5vh;
+      width: auto;
+    }
+    .nav-small li {
+    }
+    .nav-center-logo h4 a {
+      color: white;
+      font-size: 1vh;
+      font-weight: bold;
+    }
+    .icon-link {
+      height: 7vh;
+      width: 7vh;
+    }
+    .topnav-icon li a,
+    .topnav-auth-icon li a {
+      text-decoration: none;
+      color: white;
+      transition: opacity 124ms linear, transform 124ms linear;
+    }
+
+    .topnav-icon li a:hover,
+    .topnav-auth-icon li a:hover {
+      color: #164A41;
+      background: white;
+      border-radius: 50%;
+      transform: scale(1.05);
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .nav-small {
+      display: none;
+    }
+  }
+
+  @media screen and (max-height: 600px) {
+    .title-compressing {
+      font-size: 2.5vw;
+      line-height: 3vw;
+      padding-bottom: 2.7vw;
+    }
+    .main-text {
+      font-size: 1.5vw;
+      letter-spacing: 0.25px;
+      line-height: 2.5vw;
+      padding-bottom: 1.35vw;
+    }
+    .upload-form {
+      margin-top: 7vw;
+    }
+    .share-form .right .form-control {
+      height: 4vw;
+    }
+    .share-form .right .form-control-lg{
+      height: 10vw;
+    }
+    .registr-form {
+      margin-top: 7vw;
+    }
+
+    .logged-out {
+      margin-top: 7vw;
+    }
+    .login-form {
+      margin-top: 7vw;
+    }
+    .compressing-icon {
+      height: 3vw !important;
+      width: 3vw !important;;
+    }
+    .icon-link {
+      height: 5vw;
+      width: 5vw;
+    }
+    .nav-small-main {
+      height: 6vw;
+      width: auto;
+    }
+    .nav-small-auth {
+      height: 6vw;
+      width: auto;
+    }
+    .share-form .right {
+      margin-bottom: 8vw;
+    }
+
+    .detail-view {
+      margin-top: 7vw;
+    }
+    .detail-view .btn-secondary{
+      border: 2px solid black;
+    }
+    .detail-view .right {
+      margin-bottom: 7vw;
+    }
+    .detail-view .username-block{
+      font-size: 7vh !important;
+      line-height: 10vh !important;
+      height: 10vh !important;
+      margin-bottom: 3vh !important;
+    }
+    main .features .left .picture-block {
+      height: 200px;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3vh !important;
+    }
+    .detail-view .title-block {
+      font-size: 8vh !important;
+      line-height: 10vh !important;
+      height: 10vh !important;
+      margin-bottom: 3vh !important;
+    }
+    .detail-view .anons-block {
+      font-size: 6vh !important;
+      line-height: auto !important;
+      height: auto !important;
+      padding-top: 3vh;
+      margin-bottom: 3vh !important;
+    }
+    .detail-view .full_text-block {
+      font-size: 4.5vh !important;
+      line-height: auto !important;
+      padding-top: 3vh;
+      height: auto !important;
+      margin-bottom: 3vh !important;
+    }
+    .detail-view .rating-block {
+      font-size: 4.5vh !important;
+      line-height: 20vh !important;
+      font-weight: normal;
+      height: 20vh !important;
+      margin-bottom: 3vh !important;
+    }
+    .detail-view .date-block {
+      font-size: 6vh !important;
+      line-height: 10vh !important;
+      height: 10vh !important;
+      margin-bottom: 3vh !important;
+    }
+
+    .pictures_lent {
+      margin-top: 7vw;
+      margin-bottom: 7vw;
+    }
+    main .features_0 .img-fluid {
+      height: 500px;
+      width: auto;
+    }
+  }
